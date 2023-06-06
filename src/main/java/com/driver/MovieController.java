@@ -11,8 +11,7 @@ import java.util.List;
 @RequestMapping("movies")
 public class MovieController {
 
-    @Autowired
-    MovieService movieService;
+    MovieService movieService = new MovieService();
 
     @PostMapping("/add-movie")
     public ResponseEntity<String> addMovie(@RequestBody Movie movie){

@@ -5,8 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 
 public class MovieService {
-    @Autowired
-    MovieRepository movieRepository;
+    MovieRepository movieRepository = new MovieRepository();
     public String addMovie(Movie movie) {
         return movieRepository.addMovie(movie);
     }
